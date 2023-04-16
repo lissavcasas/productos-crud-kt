@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.cl02_t5ab_casasquispe_marilyn.ui.views.MainFragment"
+        android:label="@string/titulo_principal"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.cl02_t5ab_casasquispe_marilyn.ui.views.DetalleFragment"
+        android:label="@string/titulo_detalle"
+        tools:layout="@layout/fragment_detalle" >
+        <argument
+            android:name="producto"
+            app:argType="com.example.cl02_t5ab_casasquispe_marilyn.room.Producto"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
